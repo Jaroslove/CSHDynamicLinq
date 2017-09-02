@@ -24,7 +24,8 @@ namespace SortBuCol
             var method = selmethod.First();
             method = method.MakeGenericMethod(typeof(T), propertyExpression.Type);
             var rez = (IEnumerable<T>)method.Invoke(null, new Object[] { source, lambda });
-            return rez.MyOrdering("LastName", "").MyOrdering("FirstName", "").MyOrdering("Patronymic", "");
+            return rez;
+            //return rez.MyOrdering("LastName", "").MyOrdering("FirstName", "").MyOrdering("Patronymic", "");
         }
         public static IEnumerable<T> MyOrdering<T>(this IEnumerable<T> source, string propertyName, string typeOfSort)
         {
@@ -36,8 +37,8 @@ namespace SortBuCol
 
             Type enumType = typeof(Enumerable);
             var methods = enumType.GetMethods(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-            //var selmethod = methods.Where(m => m.Name == "OrderByDescending" && m.GetParameters().Count() == 2); ThenBy
-            var selmethod = methods.Where(m => m.Name == "ThenBy" && m.GetParameters().Count() == 2);
+            //var selmethod = methods.Where(m => m.Name == "OrderByDescending" && m.GetParameters().Count() == 2); ThenBy, ThenByDescending
+            var selmethod = methods.Where(m => m.Name == typeOfSort && m.GetParameters().Count() == 2);
             var method = selmethod.First();
             method = method.MakeGenericMethod(typeof(T), propertyExpression.Type);
             var rez = (IEnumerable<T>)method.Invoke(null, new Object[] { source, lambda });

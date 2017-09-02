@@ -67,18 +67,20 @@ namespace SortBuCol
         {
             string propertyName = dataGridView1.Columns[e.ColumnIndex].DataPropertyName;
             List<Person> people = (List<Person>)source.DataSource;
-            //people = people.OrderBy(propertyName, "OrderByDescending").ToList();
-            if( i== 0)
-            {
-                people = people.OrderBy(propertyName, "OrderByDescending").ToList();
-                //people = people.MyOrdering(propertyName, "").ToList();
-            }
-            else
-            {
-                people = people.OrderBy(propertyName, "OrderBy").ToList();
-            }
+            ////people = people.OrderBy(propertyName, "OrderByDescending").ToList();
+            //if( i== 0)
+            //{
+            //    people = people.OrderBy(propertyName, "OrderByDescending").ToList();
+            //    //people = people.MyOrdering(propertyName, "").ToList();
+            //}
+            //else
+            //{
+            //    people = people.OrderBy(propertyName, "OrderBy").ToList();
+            //}
+            //source.DataSource = people;
+            //i = 1;
+            people = people.SupremeOreder(propertyName +" "+ "OrderBy").ToList();
             source.DataSource = people;
-            i = 1;
         }
     }
 }
