@@ -1,0 +1,9 @@
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\bin\Debug\SortBuCol.exe.config
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\bin\Debug\SortBuCol.exe
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\bin\Debug\SortBuCol.pdb
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\obj\Debug\SortBuCol.csprojResolveAssemblyReference.cache
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\obj\Debug\SortBuCol.Form1.resources
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\obj\Debug\SortBuCol.Properties.Resources.resources
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\obj\Debug\SortBuCol.csproj.GenerateResource.Cache
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\obj\Debug\SortBuCol.exe
+E:\prog\cs\DYnamicLInq\SortBuCol\SortBuCol\obj\Debug\SortBuCol.pdb
