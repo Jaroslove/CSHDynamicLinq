@@ -37,7 +37,7 @@ namespace SortBuCol
 
             Type enumType = typeof(Enumerable);
             var methods = enumType.GetMethods(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
-            //var selmethod = methods.Where(m => m.Name == "OrderByDescending" && m.GetParameters().Count() == 2); ThenBy, ThenByDescending
+            //var selmethod = methods.Where(m => m.Name == "OrderByDescending" && m.GetParameters().Count() == 2); //ThenBy, ThenByDescending
             var selmethod = methods.Where(m => m.Name == typeOfSort && m.GetParameters().Count() == 2);
             var method = selmethod.First();
             method = method.MakeGenericMethod(typeof(T), propertyExpression.Type);

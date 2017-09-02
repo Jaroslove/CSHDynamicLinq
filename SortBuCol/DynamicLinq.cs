@@ -15,6 +15,10 @@ namespace SortBuCol
             {
                 case 2:
                     return source.OrderBy(array[0], array[1]);
+                case 4:
+                    return source.OrderBy(array[0], array[1]).MyOrdering(array[2], array[3]);
+                case 6:
+                    return source.OrderBy(array[0], array[1]).MyOrdering(array[2], array[3]).MyOrdering(array[4], array[5]);
                 default:
                     return null;
             }
